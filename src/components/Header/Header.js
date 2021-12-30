@@ -1,14 +1,20 @@
 import { useEffect, useState } from 'react';
+
+import Modal from '../Modal/Modal';
 import logo from '../../assets/images/logo.png';
 import { getRandomInt } from '../../helper';
 import Button from '../Button/Button';
-
 import './Header.css';
 
 const Header = () => {
   const [url, setUrl] = useState(null);
   const [error, setError] = useState(null);
   const [isCopied, setIsCopied] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+
+  const openModalHandler = () => setShowModal(true);
+
+  const closeModalHandler = () => setShowModal(false);
 
   const copyTextToClipboard = async (text) => {
     if ('clipboard' in navigator) {
@@ -23,6 +29,7 @@ const Header = () => {
     try {
       await copyTextToClipboard(url);
       setIsCopied(true);
+      closeModalHandler();
       setTimeout(() => {
         setIsCopied(false);
       }, 1000);
@@ -50,22 +57,37 @@ const Header = () => {
   }, []);
 
   return (
-    <header className='header'>
-      <img src={logo} alt=';ogo' />
-      <div className='copy-container'>
-        <p>{url || error}</p>
+    <>
+      <Modal
+        show={showModal}
+        onCancel={closeModalHandler}
+        header='Share link'
+        footer={<Button onClick={clickHandler}>Copy</Button>}
+      >
+        <p className='url'>{url || error}</p>
+      </Modal>
+
+      <header className='header'>
+        <img src={logo} alt=';ogo' />
+        <div className='copy-container'>
+          <p>{url || error}</p>
+          <Button
+            style={{ fontSize: '14px' }}
+            disabled={isCopied}
+            onClick={clickHandler}
+          >
+            {isCopied ? 'Copied' : 'Copy'}
+          </Button>
+        </div>
         <Button
+          className='mobile-only'
           style={{ fontSize: '14px' }}
-          disabled={isCopied}
-          onClick={clickHandler}
+          onClick={openModalHandler}
         >
-          {isCopied ? 'Copied' : 'Copy'}
+          Share
         </Button>
-      </div>
-      <Button className='mobile-only' style={{ fontSize: '14px' }}>
-        Share
-      </Button>
-    </header>
+      </header>
+    </>
   );
 };
 

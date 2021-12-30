@@ -9,10 +9,14 @@
 
 .header img {
   position: relative;
+  z-index: 1;
   height: 40px;
+  cursor: pointer;
 }
 
 .copy-container {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -33,6 +37,13 @@
 
 .btn.mobile-only {
   display: none;
+}
+
+.url {
+  font-size: 1.5rem;
+
+  color: #000;
+  text-align: center;
 }
 
 @media (max-width: 768px) {

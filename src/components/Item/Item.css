@@ -1,5 +1,6 @@
 .item-container {
   position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
 
@@ -22,6 +23,7 @@
 
 .item-container__image-container {
   position: relative;
+  z-index: 1;
   padding: 20px;
 }
 

@@ -23,7 +23,7 @@ export const itemsData = [
     image: item3,
   },
   {
-    id: 1,
+    id: 4,
     heading: 'Join the community',
     subheading: 'Customize your NFTs specification',
     image: item4,
