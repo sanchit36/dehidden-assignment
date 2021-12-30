@@ -1,0 +1,17 @@
+.item-list {
+  position: relative;
+  z-index: 1;
+
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .item-list {
+    margin-top: 2.5rem;
+  }
+}

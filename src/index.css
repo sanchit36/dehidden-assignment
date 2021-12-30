@@ -1,13 +1,120 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: 'Causten';
+  src: local('Causten'), local('Causten'),
+    url('./assets/fonts/Causten-Thin.otf') format('opentype');
+  font-weight: 100;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: 'Causten';
+  src: local('Causten'), local('Causten'),
+    url('./assets/fonts/Causten-ExtraLight.otf') format('opentype');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'Causten';
+  src: local('Causten'), local('Causten'),
+    url('./assets/fonts/Causten-Light.otf') format('opentype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Causten';
+  src: local('Causten'), local('Causten'),
+    url('./assets/fonts/Causten-Regular.otf') format('opentype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Causten';
+  src: local('Causten'), local('Causten'),
+    url('./assets/fonts/Causten-Medium.otf') format('opentype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Causten';
+  src: local('Causten'), local('Causten'),
+    url('./assets/fonts/Causten-SemiBold.otf') format('opentype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Causten';
+  src: local('Causten'), local('Causten'),
+    url('./assets/fonts/Causten-Bold.otf') format('opentype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Causten';
+  src: local('Causten'), local('Causten'),
+    url('./assets/fonts/Causten-ExtraBold.otf') format('opentype');
+  font-weight: 900;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Causten', sans-serif;
+}
+
+body,
+#root {
+  color: #fff;
+  width: 100%;
+  height: 100vh;
+
+  background: #0d0e1d;
+}
+
+.vector1 {
+  position: absolute;
+  max-width: 826px;
+  width: 100%;
+  height: 90vh;
+  left: -167px;
+  top: 20px;
+
+  background: linear-gradient(123.82deg, #81a1ff 20.63%, #5449e8 80.51%),
+    linear-gradient(123.44deg, #faa94d 20.46%, #f27038 80.68%),
+    linear-gradient(90deg, #ff48e2 0%, #ff2936 93.67%),
+    radial-gradient(
+      14109.95% 737.02% at 62.27% -5.55%,
+      #ee7c65 0%,
+      #f7c39d 21.88%,
+      #ead899 39.58%,
+      #87d5ff 57.81%,
+      #9281f5 79.17%,
+      #fa5284 100%
+    ),
+    #ffbc57;
+  filter: blur(350px);
+}
+
+@media (max-width: 900px) {
+  .vector1 {
+    max-width: 466px;
+    width: 100%;
+    height: 481.8px;
+    left: -122px;
+    top: -217px;
+
+    background: linear-gradient(123.82deg, #81a1ff 20.63%, #5449e8 80.51%),
+      linear-gradient(123.44deg, #faa94d 20.46%, #f27038 80.68%),
+      linear-gradient(90deg, #ff48e2 0%, #ff2936 93.67%),
+      radial-gradient(
+        14109.95% 737.02% at 62.27% -5.55%,
+        #ee7c65 0%,
+        #f7c39d 21.88%,
+        #ead899 39.58%,
+        #87d5ff 57.81%,
+        #9281f5 79.17%,
+        #fa5284 100%
+      ),
+      #ffbc57;
+    filter: blur(197.458px);
+  }
 }
